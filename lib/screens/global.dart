@@ -32,7 +32,7 @@ class _GlobalState extends State<Global> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                'Casos de COVID-19 no Mundo',
+                'Casos de Corona Vírus no Mundo',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,

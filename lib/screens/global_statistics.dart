@@ -9,6 +9,27 @@ class GlobalStatistics extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      children: <Widget>[],
+    );
+  }
+
+  Widget buildCard(String title, int totalCount, int todayCount, Color color) {
+    return Card(
+      elevation: 1,
+      child: Container(
+          height: 100,
+          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          child: Column(
+            children: <Widget>[
+              Text(title,
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14,
+                  )),
+            ],
+          )),
+    );
   }
 }
