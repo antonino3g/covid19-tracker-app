@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
 Color kPrimaryColor = Color(0xFF166DE0);
-Color kConfirmedColor = Color(0xFFFF1242);
+Color kConfirmedColor = Color(0xFF6D757D);
 Color kActiveColor = Color(0xFF017BFF);
 Color kRecoveredColor = Color(0xFF29A746);
-Color kDeathColor = Color(0xFF6D757D);
+Color kDeathColor = Color(0xFFFF1242);
 
 LinearGradient kGradientShimmer = LinearGradient(
   begin: Alignment.centerLeft,
   end: Alignment.centerRight,
   colors: [
-    Color(0xcccccc),
-    Color(0xf2f2f2),
+    Colors.grey[300]!,
+    Colors.grey[100]!,
   ],
 );
 

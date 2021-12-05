@@ -8,7 +8,7 @@ import '../models/country.dart';
 class CovidService {
   Future<GlobalSummaryModel> getGlobalSummary() async {
     final data = await http.Client()
-        .get(Uri.parse("https://api.covid19api.com/summary"));
+        .get(Uri.parse('https://api.covid19api.com/summary'));
 
     if (data.statusCode != 200) throw Exception();
 
@@ -20,7 +20,7 @@ class CovidService {
 
   Future<List<CountrySummaryModel>> getCountrySummary(String slug) async {
     final data = await http.Client().get(
-        Uri.parse("https://api.covid19api.com/total/dayone/country/" + slug));
+        Uri.parse('https://api.covid19api.com/total/dayone/country/' + slug));
 
     if (data.statusCode != 200) throw Exception();
 
@@ -33,7 +33,7 @@ class CovidService {
 
   Future<List<CountryModel>> getCountryList() async {
     final data = await http.Client()
-        .get(Uri.parse("https://api.covid19api.com/countries"));
+        .get(Uri.parse('https://api.covid19api.com/countries'));
 
     if (data.statusCode != 200) throw Exception();
 
