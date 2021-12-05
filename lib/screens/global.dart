@@ -1,3 +1,4 @@
+import 'package:app_test/screens/global.loading.dart';
 import 'package:flutter/material.dart';
 import '../services/covid_service.dart';
 import '../models/global_summary.dart';
@@ -39,10 +40,19 @@ class _GlobalState extends State<Global> {
                   fontSize: 14,
                 ),
               ),
-              Icon(
-                Icons.refresh,
-                color: Colors.white,
-              ),
+              GestureDetector(
+                onTap: () {
+                  setState(
+                    () {
+                      summary = covidService.getGlobalSummary();
+                    },
+                  );
+                },
+                child: Icon(
+                  Icons.refresh,
+                  color: Colors.white,
+                ),
+              )
             ],
           ),
         ),
@@ -55,13 +65,11 @@ class _GlobalState extends State<Global> {
               );
             switch (snapshot.connectionState) {
               case ConnectionState.waiting:
-                return Center(
-                  child: Text('Carregando'),
-                );
+                return GlobalLoading();
               default:
                 return !snapshot.hasData
                     ? Center(
-                        child: Text("Empty"),
+                        child: Text('Empty'),
                       )
                     : GlobalStatistics(
                         summary: snapshot.data as dynamic,

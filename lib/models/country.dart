@@ -6,6 +6,6 @@ class CountryModel {
   CountryModel(this.country, this.slug, this.iso2);
 
   factory CountryModel.fromJson(Map<String, dynamic> json) {
-    return CountryModel(json["Country"], json["Slug"], json["ISO2"]);
+    return CountryModel(json['Country'], json['Slug'], json['ISO2']);
   }
 }

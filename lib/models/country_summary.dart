@@ -11,12 +11,12 @@ class CountrySummaryModel {
 
   factory CountrySummaryModel.fromJson(Map<String, dynamic> json) {
     return CountrySummaryModel(
-      json["Country"],
-      json["Confirmed"],
-      json["Deaths"],
-      json["Recovered"],
-      json["Active"],
-      DateTime.parse(json["Date"]),
+      json['Country'],
+      json['Confirmed'],
+      json['Deaths'],
+      json['Recovered'],
+      json['Active'],
+      DateTime.parse(json['Date']),
     );
   }
 }

@@ -12,13 +12,13 @@ class GlobalSummaryModel {
 
   factory GlobalSummaryModel.fromJson(Map<String, dynamic> json) {
     return GlobalSummaryModel(
-      json["Global"]["NewConfirmed"],
-      json["Global"]["TotalConfirmed"],
-      json["Global"]["NewDeaths"],
-      json["Global"]["TotalDeaths"],
-      json["Global"]["NewRecovered"],
-      json["Global"]["TotalRecovered"],
-      DateTime.parse(json["Date"]),
+      json['Global']['NewConfirmed'],
+      json['Global']['TotalConfirmed'],
+      json['Global']['NewDeaths'],
+      json['Global']['TotalDeaths'],
+      json['Global']['NewRecovered'],
+      json['Global']['TotalRecovered'],
+      DateTime.parse(json['Date']),
     );
   }
 }
